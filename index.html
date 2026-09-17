@@ -2265,6 +2265,56 @@
           auto !important;
       }
     }
+  
+    /* Compact page navigation: 40px circle, 48px touch target. */
+    .page-scroll-button {
+      position: fixed;
+      right: max(14px, env(safe-area-inset-right));
+      bottom: max(14px, env(safe-area-inset-bottom));
+      z-index: 900;
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--blue);
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+    .page-scroll-button::before {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: rgba(255,255,255,.96);
+      box-shadow: 0 3px 12px rgba(47,65,86,.08);
+    }
+    .page-scroll-button svg {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform .18s ease;
+    }
+    .page-scroll-button[data-direction="up"] svg { transform: rotate(180deg); }
+    .page-scroll-button:hover::before { border-color: var(--blue); }
+    .page-scroll-button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border-radius: 50%; }
+    .page-scroll-button[hidden], body.menu-open .page-scroll-button { display: none; }
+    .data-panel h4 { font-size: 12px; }
+    .metric-label { font-size: 12px; }
+    .film-meta span { font-size: 12px; letter-spacing: .035em; overflow-wrap: anywhere; }
+    .film-meta { min-width: 0; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .page-scroll-button svg { transition: none; }
+    }
   </style>
 </head>
 
@@ -2495,7 +2545,7 @@
           <div class="data-panel">
 
             <h4>
-              FACIAL DATA
+              膚況
             </h4>
 
 
@@ -2504,11 +2554,11 @@
               <div class="metric-label">
 
                 <span>
-                  Balance
+                  肌膚保水度
                 </span>
 
                 <span>
-                  87%
+                  95%
                 </span>
 
               </div>
@@ -2516,7 +2566,7 @@
 
               <div class="metric-bar">
 
-                <span style="width:87%"></span>
+                <span style="width:95%;background:#ACD6FF"></span>
 
               </div>
 
@@ -2528,11 +2578,11 @@
               <div class="metric-label">
 
                 <span>
-                  Contour
+                  淚溝
                 </span>
 
                 <span>
-                  74%
+                  71%
                 </span>
 
               </div>
@@ -2540,7 +2590,7 @@
 
               <div class="metric-bar">
 
-                <span style="width:74%"></span>
+                <span style="width:71%;background:#FFD1A4"></span>
 
               </div>
 
@@ -2552,11 +2602,11 @@
               <div class="metric-label">
 
                 <span>
-                  Texture
+                  眼周細紋
                 </span>
 
                 <span>
-                  81%
+                  18%
                 </span>
 
               </div>
@@ -2564,7 +2614,7 @@
 
               <div class="metric-bar">
 
-                <span style="width:81%"></span>
+                <span style="width:18%;background:#ACD6FF"></span>
 
               </div>
 
@@ -2783,29 +2833,11 @@
 
 
               <div class="film-meta">
-
-
-                <span>
-
-                  9:16 VERTICAL FILM
-
-                </span>
-
-
-                <span>
-
-                  17 SEC
-
-                </span>
-
-
-                <span>
-
-                  AI × 3D × MEDICAL
-
-                </span>
-
-
+                <span>#AIAesthetics</span>
+                <span>#DigitalSkinAnalysis</span>
+                <span>#3DSimulation</span>
+                <span>#PersonalizedAesthetics</span>
+                <span>#SeeBeforeYouDecide</span>
               </div>
 
             </div>
@@ -3931,6 +3963,44 @@
         }
       );
 
+  </script>
+
+
+  <button type="button" class="page-scroll-button" id="pageScrollButton"
+    data-direction="down" aria-label="前往頁面底部" title="前往頁面底部" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 4v16M6 14l6 6 6-6" />
+    </svg>
+  </button>
+
+  <script>
+    (() => {
+      const button = document.getElementById('pageScrollButton');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let frame = 0;
+      function updateScrollButton() {
+        frame = 0;
+        const bottom = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        const atBottom = bottom - window.scrollY <= 8;
+        button.hidden = bottom <= 8;
+        button.dataset.direction = atBottom ? 'up' : 'down';
+        const label = atBottom ? '回到頁面頂部' : '前往頁面底部';
+        button.setAttribute('aria-label', label);
+        button.title = label;
+      }
+      function scheduleUpdate() {
+        if (!frame) frame = window.requestAnimationFrame(updateScrollButton);
+      }
+      button.addEventListener('click', () => {
+        const top = button.dataset.direction === 'up' ? 0 : document.documentElement.scrollHeight;
+        window.scrollTo({ top, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+      });
+      window.addEventListener('scroll', scheduleUpdate, { passive: true });
+      window.addEventListener('resize', scheduleUpdate);
+      window.addEventListener('load', scheduleUpdate);
+      if ('ResizeObserver' in window) new ResizeObserver(scheduleUpdate).observe(document.body);
+      updateScrollButton();
+    })();
   </script>
 
 </body>
