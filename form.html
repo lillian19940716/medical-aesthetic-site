@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AESTHETIC LAB 首次數位美學體驗｜轉帳與預約資料填寫。課程模擬展示。">
+<title>預約首次體驗｜AESTHETIC LAB</title>
+<style>
+:root{--navy:#2F4156;--blue:#567C8D;--light:#C8D9E6;--warm:#F5EFEB;--bg:#F2F6F8;--text:#526A7A;--line:#D7E1E7;--serif:"GenRyuMin TW R","Noto Serif TC","Songti TC",serif;--sans:"PingFang TC","Noto Sans TC",Arial,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--navy);font:500 16px/1.8 var(--sans)}a{color:inherit}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:default;opacity:.55}[hidden]{display:none!important}:focus-visible{outline:3px solid var(--blue);outline-offset:4px}header{background:white;border-bottom:1px solid var(--line)}.nav{max-width:1180px;margin:auto;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{text-decoration:none;font:400 18px var(--serif);letter-spacing:.12em}.brand small{display:block;font:600 12px/1.8 var(--sans);letter-spacing:.15em;color:var(--blue);margin-top:5px}.back{font-size:14px;text-decoration:none}.back:hover{text-decoration:underline}.wrap{max-width:1180px;margin:auto;padding:58px 28px 80px}.eyebrow{font-size:12px;letter-spacing:.18em;color:var(--blue);font-weight:700;margin:0 0 15px}.eyebrow:before{content:"";display:inline-block;width:28px;height:1px;background:var(--blue);vertical-align:middle;margin-right:12px}h1,h2,h3,p{margin-top:0}h1{font:400 clamp(32px,4.5vw,52px)/1.4 var(--serif);margin-bottom:16px}h2{font:400 27px/1.5 var(--serif);margin-bottom:10px}h3{font-size:17px;margin-bottom:8px}.lead{color:var(--text);margin-bottom:28px}.steps{display:flex;gap:0;list-style:none;padding:0;margin:0 0 32px;max-width:640px;flex-wrap:wrap}.steps li{display:flex;align-items:center;gap:9px;font-size:14px;margin:0 22px 12px 0}.steps b{width:27px;height:27px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:white;font-size:12px}.steps li:first-child b{background:var(--navy);color:white;border-color:var(--navy)}.notice{border-left:3px solid var(--blue);padding:14px 18px;background:#e6eef3;font-size:14px;margin-bottom:30px}.layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:32px;align-items:start}.summary{background:var(--navy);color:white;border-radius:24px;padding:32px}.summary .eyebrow{color:var(--light)}.summary .eyebrow:before{background:var(--light)}.summary h2{font-size:29px}.price{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin:20px 0 24px}.price strong{font:400 46px/1.2 var(--serif)}.price del{font-size:14px;color:#d6e0e8}.includes{list-style:none;margin:0;padding:24px 0;border-top:1px solid #ffffff30;border-bottom:1px solid #ffffff30}.includes li{margin:8px 0;font-size:15px}.includes li:before{content:"✓";color:var(--light);margin-right:12px}.gift{padding-top:25px}.gift small{display:block;letter-spacing:.14em;color:var(--light);font-size:12px;margin-bottom:8px}.gift strong{display:block;font:400 25px/1.5 var(--serif)}.quota{background:var(--warm);border-radius:18px;padding:23px 26px;margin-top:18px}.quota-row{display:flex;justify-content:space-between;align-items:center;gap:12px}.quota-row p{margin:0;font-size:14px}.quota-number{font-size:14px;white-space:nowrap}.quota-number strong{font:400 45px/1 var(--serif);margin:0 6px}.bar{height:5px;background:#ddd9d6;border-radius:10px;margin:17px 0 12px;overflow:hidden}.bar span{display:block;width:21%;height:100%;background:var(--blue);transition:width .3s}.fine{font-size:13px;color:var(--text);margin:0}.refund{padding:26px 8px}.refund h3{font:400 25px var(--serif)}.refund p{font-size:14px;color:var(--text);margin:10px 0 0}.panel{background:white;border:1px solid var(--line);border-radius:24px;padding:32px;margin-bottom:22px}.section-no{display:inline-grid;place-items:center;width:30px;height:30px;background:var(--bg);border-radius:50%;font:600 13px var(--sans);margin-right:10px;vertical-align:middle}.sub{font-size:14px;color:var(--text);margin-bottom:22px}.bank{background:var(--bg);border:1px solid var(--line);border-radius:15px;padding:20px}.bank dl{margin:0}.bank dl>div{display:flex;justify-content:space-between;gap:16px;margin-bottom:8px}.bank dt{color:var(--text);font-size:14px}.bank dd{margin:0;text-align:right;font-size:15px}.account{border-top:1px solid var(--line);margin-top:16px;padding-top:16px}.account label{font-size:13px;color:var(--text)}.account-line{display:flex;align-items:center;gap:12px;margin-top:5px}.account input{border:0;background:transparent;color:var(--navy);font-size:clamp(19px,2.1vw,25px);letter-spacing:.055em;width:100%;min-width:0;padding:4px 0}.copy{flex:none;border:1px solid var(--line);background:white;color:var(--navy);border-radius:9px;padding:7px 12px;font-size:14px}.copy:hover{border-color:var(--blue)}#copyStatus{font-size:13px;color:var(--blue);min-height:24px;margin:6px 0 0}.bank-note{font-size:13px;color:var(--text);margin:14px 0 0}.fields{display:grid;grid-template-columns:1fr 1fr;gap:20px 18px}.field{min-width:0}.full{grid-column:1/-1}.field>label{display:block;font-size:14px;font-weight:600;margin-bottom:7px}.optional{font-weight:400;color:var(--text);font-size:13px}.field input,.field select,.field textarea{display:block;width:100%;min-height:48px;padding:11px 12px;border:1px solid var(--line);border-radius:9px;background:#fbfcfd;color:var(--navy);font-size:16px}.field textarea{resize:vertical;min-height:100px}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);background:white}.field .help{font-size:13px;color:var(--text);margin:6px 0 0}fieldset{margin:0;padding:0;border:0;min-width:0}legend{font-size:14px;font-weight:600;margin-bottom:8px}.slots{display:flex;gap:8px;flex-wrap:wrap}.slot{position:relative}.slot input{position:absolute;opacity:0;width:1px;height:1px}.slot span{display:block;border:1px solid var(--line);border-radius:9px;padding:10px 13px;font-size:14px;cursor:pointer}.slot input:checked+span{background:var(--navy);color:white;border-color:var(--navy)}.slot input:focus-visible+span{outline:3px solid var(--blue);outline-offset:3px}.check{display:flex;align-items:flex-start;gap:10px;font-size:14px;margin:24px 0 20px;color:var(--text)}.check input{width:18px;height:18px;flex:none;accent-color:var(--navy);margin:4px 0 0}.submit{display:block;width:100%;min-height:55px;background:var(--navy);color:white;border:0;border-radius:12px;font-weight:600;transition:background .2s}.submit:hover{background:var(--blue)}.after{text-align:center;font-size:13px;color:var(--text);margin:12px 0 0}.success{background:white;border:1px solid var(--line);border-radius:24px;padding:40px 32px;text-align:center}.success-mark{display:grid;place-items:center;width:60px;height:60px;background:var(--bg);border-radius:50%;margin:0 auto 22px;font-size:28px}.success p{color:var(--text)}.success .next{padding:18px;background:var(--bg);border-radius:12px;font-size:15px;text-align:left}.return{display:inline-block;background:var(--navy);color:white;border-radius:99px;padding:12px 26px;text-decoration:none;margin-top:12px}.error{font-size:14px;color:#994139;margin-top:12px}footer{border-top:1px solid var(--line);padding:28px;text-align:center;font-size:13px;color:var(--text)}@media(min-width:900px){.left{position:sticky;top:24px}}@media(max-width:800px){.wrap{padding-top:36px}.layout{grid-template-columns:1fr;gap:10px}.summary{padding:27px}.refund{padding:23px 5px}.panel{padding:26px}.nav{padding:18px 22px}.brand{font-size:15px}.brand small{font-size:11px}.back{font-size:13px}}@media(max-width:480px){.wrap{padding:32px 18px 44px}.panel{padding:23px 20px}.fields{grid-template-columns:1fr}.full{grid-column:auto}.steps li{margin-right:15px;font-size:13px}.steps b{width:23px;height:23px}.quota{padding:22px}.quota-row{align-items:flex-start}.quota-number strong{font-size:38px}.bank{padding:16px}.nav{padding:17px 18px}.success{padding:30px 23px}.price strong{font-size:42px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><nav class="nav" aria-label="主導覽"><a class="brand" href="./index.html">AESTHETIC LAB<small>AI DIGITAL AESTHETICS</small></a><a class="back" href="./index.html">← 返回首頁</a></nav></header>
+<main class="wrap">
+<p class="eyebrow">YOUR FIRST EXPERIENCE</p>
+<h1>先了解自己，<br>再決定下一步。</h1>
+<p class="lead">預約首次數位美學體驗，讓每一個改變，都從清楚的了解開始。</p>
+<ol class="steps" aria-label="預約流程"><li><b>01</b>轉帳付款</li><li><b>02</b>填寫預約資料</li><li><b>03</b>專人聯繫確認</li></ol>
+<div class="notice"><strong>課程模擬展示</strong>　以下帳號皆為虛構，請勿實際匯款。請使用測試資料。送出內容會儲存至 Google 表單，不會成立真實預約或安排實際聯繫。</div>
+<div class="layout">
+<aside class="left" aria-label="體驗方案">
+<section class="summary"><p class="eyebrow">DIGITAL AESTHETIC EXPERIENCE</p><h2>首次數位美學體驗</h2><div class="price"><strong>NT$980</strong><del>原價 NT$3,600</del></div><ul class="includes"><li>數位肌膚分析</li><li>3D 五官分析／模擬</li><li>醫師一對一專業評估</li><li>個人化醫美療程方向建議</li><li>三個月後數位回測</li></ul><div class="gift"><small>FIRST 100 BONUS</small><strong>前 100 名加贈<br>NT$2,000 醫美療程抵用券</strong></div></section>
+<section class="quota" aria-label="示範剩餘名額"><div class="quota-row"><p><strong>前 100 組限定禮遇</strong><br>首次體驗加贈方案</p><div class="quota-number" aria-live="polite">剩餘<strong id="remaining">21</strong>組</div></div><div class="bar" aria-hidden="true"><span id="remainingBar"></span></div><p class="fine" id="quotaNote">本機示範名額：每次提交減一組，重新整理保留；非實際收款或預約數據。</p></section>
+<section class="refund"><h3>100 天無改善退費</h3><p>沿用首頁體驗方案的退費承諾。此為課程展示文案，未提供真實療程或交易；正式服務的起算日、評估方式與申請條件，需另行載明。</p></section>
+</aside>
+<div class="right">
+<div id="bookingFlow">
+<section class="panel" aria-labelledby="paymentHeading"><h2 id="paymentHeading"><span class="section-no">01</span>轉帳資訊</h2><p class="sub">方案金額 NT$980。完成付款後，填寫下方資料以便核對與安排聯繫。</p><div class="bank"><dl><div><dt>銀行／代碼</dt><dd>示意銀行／000（虛構）</dd></div><div><dt>戶名</dt><dd>AESTHETIC LAB 課程展示</dd></div><div><dt>轉帳金額</dt><dd><strong>NT$980</strong></dd></div></dl><div class="account"><label for="demoAccount">展示用帳號（不可匯款）</label><div class="account-line"><input id="demoAccount" value="00000000000000" readonly aria-label="虛構轉帳帳號"><button class="copy" id="copyAccount" type="button">複製帳號</button></div><p id="copyStatus" role="status"></p></div></div><p class="bank-note">作業展示請直接試填下方表單，不需要實際轉帳。</p></section>
+<section class="panel" aria-labelledby="bookingHeading"><h2 id="bookingHeading"><span class="section-no">02</span>付款與預約資料</h2><p class="sub">請留下方便聯繫的時間。正式流程將由專人核對款項後，與您確認到店時段。除標示選填外，皆為必填。</p>
+<noscript><p class="error">請開啟 JavaScript 以整理日期與預約時段，或直接填寫 Google 表單。</p><p><a href="https://forms.gle/2dmrpnBPE7vx9LUX6">直接開啟 Google 表單</a></p></noscript>
+<form id="bookingForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeFiD2wIp3Bb1q-nSeOMoa_Px_M7EpVB3cQfEX_s8V4P-N1qw/formResponse" method="POST" target="_self">
+<input type="hidden" name="emailAddress" id="googleEmail"><input type="hidden" name="entry.529860743_sentinel" value=""><input type="hidden" name="entry.1147461634_sentinel" value=""><input type="hidden" name="fvv" value="1"><input type="hidden" name="pageHistory" value="0">
+<input type="hidden" name="entry.1354289981_year" id="dateYear"><input type="hidden" name="entry.1354289981_month" id="dateMonth"><input type="hidden" name="entry.1354289981_day" id="dateDay"><input type="hidden" name="entry.1496993266" id="googleNotes">
+<div class="fields">
+<div class="field"><label for="customerName">姓名／稱呼</label><input id="customerName" name="entry.644019023" autocomplete="name" maxlength="40" required placeholder="請填寫稱呼"></div>
+<div class="field"><label for="phone">手機號碼</label><input id="phone" name="entry.180173604" type="tel" inputmode="tel" autocomplete="tel" pattern="09[0-9]{8}" maxlength="10" required placeholder="09xxxxxxxx" title="請輸入 09 開頭的 10 位手機號碼"></div>
+<div class="field full"><label for="email">Email</label><input id="email" name="entry.1098810807" type="email" required autocomplete="email" maxlength="120" placeholder="name@example.com"></div>
+<fieldset class="full" id="interestGroup"><legend>這次想了解哪些項目？（可複選）</legend><div class="slots"><label class="slot"><input type="checkbox" name="entry.529860743" value="客製化肌膚管理"><span>客製化肌膚管理</span></label><label class="slot"><input type="checkbox" name="entry.529860743" value="微整美學諮詢"><span>微整美學諮詢</span></label><label class="slot"><input type="checkbox" name="entry.529860743" value="3D 術前模擬諮詢"><span>3D 術前模擬諮詢</span></label><label class="slot"><input type="checkbox" name="entry.529860743" value="尚未確定，希望由醫師評估"><span>尚未確定，希望由醫師評估</span></label></div><p class="fine" style="margin-top:8px">3D 影像僅供溝通參考，不代表或保證實際術後結果。</p></fieldset><fieldset class="full"><legend>方便接聽電話的時段</legend><div class="slots"><label class="slot"><input type="radio" name="entry.1147461634" value="上午 10:00–12:00" required><span>10:00–12:00</span></label><label class="slot"><input type="radio" name="entry.1147461634" value="下午 12:00–17:00"><span>12:00–17:00</span></label><label class="slot"><input type="radio" name="entry.1147461634" value="晚上 17:00–20:00"><span>17:00–20:00</span></label></div></fieldset>
+<div class="field"><label for="visitDate">希望預約日期</label><input id="visitDate" type="date" required></div>
+<div class="field"><label for="visitTime">希望預約時段</label><select id="visitTime" required><option value="">請選擇時段</option>上午 10:00–12:00</option><option>下午 12:00–17:00</option><option>晚上 17:00–20:00</option></select></div>
+<div class="field full"><label for="lastFive">轉出帳號末五碼</label><input id="lastFive" name="entry.1404612963" type="text" inputmode="numeric" pattern="[0-9]{5}" minlength="5" maxlength="5" required placeholder="例如：12345" title="請填寫 5 位數字" aria-describedby="fiveHelp"><p class="help" id="fiveHelp">填寫您轉出帳號的最後 5 碼，不是收款帳號。模擬操作可填 12345。</p></div>
+<div class="field full"><label for="notes">備註 <span class="optional">（選填）</span></label><textarea id="notes" maxlength="500" placeholder="例如：平日較方便聯繫，或希望了解的體驗項目。"></textarea></div>
+</div>
+<label class="check"><input type="checkbox" id="acknowledge" required><span>我了解此為課程展示，不需匯款；同意將本次填寫的測試資料送至此專案的 Google 表單，供作業展示使用。</span></label>
+<button class="submit" id="submitBooking" type="submit" disabled>送出付款與預約資料</button><p class="after">送出後前往 Google 確認頁，以該頁顯示的結果為準。</p><p id="submitError" class="error" role="alert" hidden></p>
+</form></section>
+</div>
+
+</div>
+</div>
+</main>
+<footer>© 2026 AESTHETIC LAB · 本網站為課程學習專案之概念作品，非實際醫療機構網站。</footer>
+<script>
+(() => {
+'use strict';
+const key='aestheticLabDemoRemainingV1';
+const form=document.getElementById('bookingForm');
+const submit=document.getElementById('submitBooking');
+const date=document.getElementById('visitDate');
+const error=document.getElementById('submitError');
+let remaining=21, submitting=false;
+function readCount(){try{const raw=localStorage.getItem(key);if(raw!==null&&/^\d+$/.test(raw)){const n=Number(raw);if(Number.isInteger(n)&&n>=0&&n<=21)return n;}}catch(_){}return remaining;}
+function showCount(){document.getElementById('remaining').textContent=String(remaining);document.getElementById('remainingBar').style.width=remaining+'%';submit.disabled=submitting;}
+function localToday(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+remaining=readCount();showCount();date.min=localToday();
+window.addEventListener('storage',e=>{if(e.key===key){remaining=readCount();showCount();}});
+window.addEventListener('pageshow',()=>{submitting=false;submit.textContent='送出付款與預約資料';showCount();});
+date.addEventListener('input',()=>date.setCustomValidity(''));
+const interests=[...document.querySelectorAll('input[name="entry.529860743"]')];
+function validateInterests(){interests[0].setCustomValidity(interests.some(i=>i.checked)?'':'請至少選擇一個想了解的項目。');}
+interests.forEach(i=>i.addEventListener('change',validateInterests));validateInterests();
+const name=document.getElementById('customerName');name.addEventListener('input',()=>name.setCustomValidity(''));
+document.getElementById('copyAccount').addEventListener('click',async()=>{const account=document.getElementById('demoAccount');const status=document.getElementById('copyStatus');try{await navigator.clipboard.writeText(account.value);status.textContent='已複製虛構帳號，請勿實際匯款。';}catch(_){account.focus();account.select();status.textContent='已選取帳號，請長按或按複製。';}});
+form.addEventListener('submit',e=>{
+ if(submitting){e.preventDefault();return;}
+ error.hidden=true;validateInterests();name.setCustomValidity(name.value.trim()?'':'請填寫姓名或稱呼。');date.min=localToday();date.setCustomValidity(date.value<date.min?'請選擇今天或未來日期。':'');
+ if(!form.reportValidity()){e.preventDefault();return;}
+ document.getElementById('googleEmail').value=document.getElementById('email').value.trim();
+ const [year,month,day]=date.value.split('-');
+ document.getElementById('dateYear').value=year;document.getElementById('dateMonth').value=String(Number(month));document.getElementById('dateDay').value=String(Number(day));
+ document.getElementById('googleNotes').value='希望預約時段：'+document.getElementById('visitTime').value+'\n備註：'+(document.getElementById('notes').value.trim()||'無');
+ // This is a local demonstration counter for submission attempts, not confirmed reservations.
+ remaining=Math.max(0,readCount()-1);try{localStorage.setItem(key,String(remaining));}catch(_){}
+ submitting=true;submit.textContent='正在前往 Google 確認頁…';showCount();
+ // Let the browser perform the native POST. Never infer success from an opaque response.
+});
+})();
+</script>
+</body>
+</html>
